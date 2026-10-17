@@ -89,5 +89,6 @@ ops_chief/
   db.py        SQLite store for the business data, issues and actions
 data/seed.json Harbor & Pine Builders: projects, tasks, invoices, POs, inbox, memory
 tests/
+```
 
 Built with Claude Code as a coding assistant. I designed the architecture, the gates and the evaluation, and I review and test everything before it ships.
