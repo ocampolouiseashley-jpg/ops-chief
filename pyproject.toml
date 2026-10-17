@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ops-chief"
+version = "0.1.0"
+description = "An AI chief-of-staff agent organization with delegation, memory, approval gates, tracing and evals."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Louise Ashley Ocampo" }]
+dependencies = ["anthropic>=1.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+ops-chief = "ops_chief.cli:main"
+
+[tool.setuptools]
+packages = ["ops_chief"]

@@ -1,0 +1,51 @@
+{
+  "company": "Harbor & Pine Builders (fictional)",
+  "today": "2026-10-16",
+  "projects": [
+    {"id": "P-101", "name": "Lakeside Clinic fit-out", "client": "Lakeside Health", "phase": "Construction", "pm": "Maya Torres", "due": "2026-12-04"},
+    {"id": "P-102", "name": "Oakridge townhomes, phase 2", "client": "Oakridge Living", "phase": "Permitting", "pm": "Ben Alvarez", "due": "2027-03-15"},
+    {"id": "P-103", "name": "Harbor Street café", "client": "Kettle & Crumb", "phase": "Closeout", "pm": "Maya Torres", "due": "2026-10-30"}
+  ],
+  "tasks": [
+    {"id": "T-201", "project_id": "P-101", "title": "Submit HVAC shop drawings", "owner": "Ridgeline Mechanical", "status": "waiting", "due": "2026-10-09", "last_update": "2026-10-02", "depends_on": null},
+    {"id": "T-202", "project_id": "P-101", "title": "Approve HVAC shop drawings", "owner": "Maya Torres", "status": "blocked", "due": "2026-10-14", "last_update": "2026-10-02", "depends_on": "T-201"},
+    {"id": "T-203", "project_id": "P-101", "title": "Order rooftop units", "owner": "Ben Alvarez", "status": "not_started", "due": "2026-10-21", "last_update": "2026-10-01", "depends_on": "T-202"},
+    {"id": "T-204", "project_id": "P-102", "title": "Respond to city permit comments", "owner": "Priya Shah", "status": "in_progress", "due": "2026-10-20", "last_update": "2026-10-15", "depends_on": null},
+    {"id": "T-205", "project_id": "P-103", "title": "Punch list walkthrough with client", "owner": "Maya Torres", "status": "in_progress", "due": "2026-10-17", "last_update": "2026-10-03", "depends_on": null},
+    {"id": "T-206", "project_id": "P-103", "title": "Collect lien waivers from subs", "owner": "Jordan Lee", "status": "not_started", "due": "2026-10-23", "last_update": "2026-09-30", "depends_on": null},
+    {"id": "T-207", "project_id": "P-102", "title": "Update schedule after permit delay", "owner": "Ben Alvarez", "status": "done", "due": "2026-10-10", "last_update": "2026-10-10", "depends_on": null}
+  ],
+  "purchase_orders": [
+    {"po_number": "PO-5501", "vendor": "Ridgeline Concrete", "project_id": "P-102", "amount": 18400.00},
+    {"po_number": "PO-5502", "vendor": "Bayview Electric", "project_id": "P-101", "amount": 3250.00},
+    {"po_number": "PO-5503", "vendor": "Summit Glass", "project_id": "P-103", "amount": 2100.00}
+  ],
+  "invoices": [
+    {"id": "INV-9001", "vendor": "Bayview Electric", "project_id": "P-101", "po_number": "PO-5502", "amount": 3250.00, "due": "2026-10-22", "status": "unpaid"},
+    {"id": "INV-9002", "vendor": "Ridgeline Concrete", "project_id": "P-102", "po_number": "PO-5501", "amount": 19950.00, "due": "2026-10-20", "status": "unpaid"},
+    {"id": "INV-9003", "vendor": "Summit Glass", "project_id": "P-103", "po_number": "PO-5503", "amount": 2100.00, "due": "2026-10-12", "status": "unpaid"},
+    {"id": "INV-9004", "vendor": "Northwind Rentals", "project_id": "P-101", "po_number": null, "amount": 640.00, "due": "2026-10-25", "status": "unpaid"}
+  ],
+  "contacts": [
+    {"name": "Maya Torres", "role": "Project manager", "email": "maya@harborpine.example", "company": "Harbor & Pine Builders"},
+    {"name": "Ben Alvarez", "role": "Project manager", "email": "ben@harborpine.example", "company": "Harbor & Pine Builders"},
+    {"name": "Priya Shah", "role": "Permit coordinator", "email": "priya@harborpine.example", "company": "Harbor & Pine Builders"},
+    {"name": "Jordan Lee", "role": "Project coordinator", "email": "jordan@harborpine.example", "company": "Harbor & Pine Builders"},
+    {"name": "Ridgeline Mechanical", "role": "HVAC subcontractor", "email": "office@ridgelinemech.example", "company": "Ridgeline Mechanical"},
+    {"name": "Ridgeline Concrete", "role": "Concrete subcontractor", "email": "billing@ridgelineconcrete.example", "company": "Ridgeline Concrete"},
+    {"name": "Summit Glass", "role": "Glazing subcontractor", "email": "ar@summitglass.example", "company": "Summit Glass"}
+  ],
+  "inbox": [
+    {"id": "M-1", "sender": "office@ridgelinemech.example", "subject": "Shop drawings", "body": "Our engineer is out this week, drawings will be late. Sorry.", "received": "2026-10-15"},
+    {"id": "M-2", "sender": "billing@ridgelineconcrete.example", "subject": "Invoice INV-9002", "body": "Attached is our invoice for the phase 2 footings, including the added pump truck day.", "received": "2026-10-14"},
+    {"id": "M-3", "sender": "owner@kettleandcrumb.example", "subject": "Walkthrough?", "body": "Are we still doing the punch walkthrough this week? Haven't heard back.", "received": "2026-10-15"}
+  ],
+  "memory": [
+    {"key": "policy.payment_approval", "value": "Every payment needs a person to approve it. Invoices over 5000 USD need the owner's approval.", "source": "owner"},
+    {"key": "policy.po_match", "value": "An invoice must match its purchase order within 2 percent. Anything else is held and sent to the project manager.", "source": "owner"},
+    {"key": "policy.outbound", "value": "Agents never send email. They draft it, and a person approves before anything goes out.", "source": "owner"},
+    {"key": "policy.stalled", "value": "A task with no update for 7 days, or past due and not done, is stalled.", "source": "owner"},
+    {"key": "client.kettle_and_crumb", "value": "Kettle & Crumb's owner prefers short updates by email and gets anxious near opening dates.", "source": "Maya Torres"},
+    {"key": "vendor.ridgeline_concrete", "value": "Ridgeline Concrete has billed extras before a change order was approved twice this year.", "source": "accounting"}
+  ]
+}
