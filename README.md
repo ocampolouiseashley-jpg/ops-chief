@@ -91,4 +91,6 @@ data/seed.json Harbor & Pine Builders: projects, tasks, invoices, POs, inbox, me
 tests/
 ```
 
+## How this was built
+
 Built with Claude Code as a coding assistant. I designed the architecture, the gates and the evaluation, and I review and test everything before it ships.
