@@ -89,13 +89,5 @@ ops_chief/
   db.py        SQLite store for the business data, issues and actions
 data/seed.json Harbor & Pine Builders: projects, tasks, invoices, POs, inbox, memory
 tests/
-```
-
-## What I'd add for a real business
-
-- Connectors for the real systems (Gmail or Outlook, Google Calendar, the CRM, the project-management tool, the accounting system) behind the same tool interfaces, with OAuth and least-privilege scopes per agent.
-- A small web page for the approval queue, with one-click approve, edit-then-approve and reject with a note that becomes memory.
-- Scheduled runs and alerts when an agent errors, a gate blocks something important, or costs spike.
-- More evaluation scenarios drawn from real weeks, run on every change to a prompt or a model.
 
 Built with Claude Code as a coding assistant. I designed the architecture, the gates and the evaluation, and I review and test everything before it ships.
